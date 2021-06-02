@@ -29,32 +29,33 @@ namespace Cờ_cá_ngựa
         /// </summary>
         private void InitializeComponent()
         {
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.logs = new System.Windows.Forms.RichTextBox();
+            this.ListenButton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // richTextBox1
+            // logs
             // 
-            this.richTextBox1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.ForeColor = System.Drawing.Color.Teal;
-            this.richTextBox1.Location = new System.Drawing.Point(23, 57);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(626, 823);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            this.logs.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logs.ForeColor = System.Drawing.Color.Teal;
+            this.logs.Location = new System.Drawing.Point(23, 57);
+            this.logs.Name = "logs";
+            this.logs.Size = new System.Drawing.Size(626, 823);
+            this.logs.TabIndex = 0;
+            this.logs.Text = "";
             // 
-            // button1
+            // ListenButton
             // 
-            this.button1.Font = new System.Drawing.Font("Consolas", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(693, 57);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(194, 68);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Listen";
-            this.button1.UseVisualStyleBackColor = true;
+            this.ListenButton.Font = new System.Drawing.Font("Consolas", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ListenButton.Location = new System.Drawing.Point(693, 57);
+            this.ListenButton.Name = "ListenButton";
+            this.ListenButton.Size = new System.Drawing.Size(194, 68);
+            this.ListenButton.TabIndex = 1;
+            this.ListenButton.Text = "Listen";
+            this.ListenButton.UseVisualStyleBackColor = true;
+            this.ListenButton.Click += new System.EventHandler(this.ListenButtonClick);
             // 
             // button2
             // 
@@ -65,7 +66,7 @@ namespace Cờ_cá_ngựa
             this.button2.TabIndex = 2;
             this.button2.Text = "List room";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.RoomFormClick);
             // 
             // button3
             // 
@@ -76,7 +77,7 @@ namespace Cờ_cá_ngựa
             this.button3.TabIndex = 3;
             this.button3.Text = "List users";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.UserFormClick);
             // 
             // label1
             // 
@@ -96,8 +97,8 @@ namespace Cờ_cá_ngựa
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.ListenButton);
+            this.Controls.Add(this.logs);
             this.Name = "Server";
             this.Text = "Server";
             this.ResumeLayout(false);
@@ -107,8 +108,8 @@ namespace Cờ_cá_ngựa
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.RichTextBox logs;
+        private System.Windows.Forms.Button ListenButton;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label1;
